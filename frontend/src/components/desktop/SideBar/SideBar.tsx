@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { SideBarButton } from "../SideBarButton/SideBarButton";
+import logo from "../../../assets/images/logo-orange.png";
 import {SideBarContainer, Separator, MenuItemContainer, MenuItemText, ButtonGrid} from "./styles";
 import {Link, useNavigate} from "react-router-dom";
 
@@ -23,7 +24,7 @@ const SideBar: React.FC = () => {
 
   return (
     <SideBarContainer>
-      
+
       <Separator />
       <ButtonGrid>
       {buttons.map((button, index) => (
@@ -38,12 +39,5 @@ const SideBar: React.FC = () => {
     </SideBarContainer>
   );
 };
-
-interface MenuItemProps {
-    icon: string;
-    title: string;
-    selected: boolean;
-    onItemClick: () => void;
-  }
 
 export {SideBar};
