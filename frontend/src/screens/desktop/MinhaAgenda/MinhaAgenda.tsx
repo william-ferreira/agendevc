@@ -8,6 +8,7 @@ import { CelulaContainer } from "../../../components/desktop/Agenda/Celula/style
 import { Celula } from "../../../components/desktop/Agenda/Celula/Celula";
 import { ColunaContainer } from "../../../components/desktop/Agenda/Coluna/styles";
 import { Coluna } from "../../../components/desktop/Agenda/Coluna/Coluna";
+import { Linha } from "../../../components/desktop/Agenda/Linha/Linha";
 
 const agendamento = [
   { servico: "Corte de Cabelo", nomeCliente: "João de Barro", whatsappCliente: "(82)95555-2222" },
@@ -17,8 +18,14 @@ const agendamento = [
 const MinhaAgenda: React.FC = () => {
   return (
     <div style={{ display: "inline-table", height: "1080px" }}>
-      <Coluna columnName="Segunda"></Coluna>
-      <Celula></Celula>
+      <div style={{display: "flex"}}>
+        <Coluna columnName="Horário/Dia"></Coluna>
+        <Coluna columnName="Segunda"></Coluna>
+      </div>
+      <div style={{display: "flex"}}>
+        <Linha rowName="08:00"></Linha>
+        <Celula></Celula>
+      </div>
       <div style={{ flexGrow: 1, backgroundColor: theme.COLORS.BACKGROUND_COLOR, padding: "20px" }}>
         {/* Add your agenda content here */}
       </div>
