@@ -3,26 +3,20 @@
  *  Software desenvolvido por Williamberg Ferreira
  */
 
+import React from 'react';
 
-import './App.css';
+import {ThemeProvider} from 'styled-components';
+import {MinhaAgenda} from './screens/desktop/MinhaAgenda/MinhaAgenda'
+import {SideBarButton} from './components/desktop/SideBarButton/SideBarButton'
+import { DateRange } from '@material-ui/icons';
+
+import {theme} from './styles/theme'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <MinhaAgenda></MinhaAgenda>
+    </ThemeProvider>
   );
 }
 
