@@ -11,11 +11,12 @@ import {SideBarButton} from './components/desktop/SideBarButton/SideBarButton'
 import { DateRange } from '@material-ui/icons';
 
 import {theme} from './styles/theme'
+import { Router } from './router/Router';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <MinhaAgenda></MinhaAgenda>
+      <Router></Router>
     </ThemeProvider>
   );
 }

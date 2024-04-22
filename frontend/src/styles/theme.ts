@@ -6,6 +6,8 @@
 export const theme = {
     COLORS: {
         PRIMARY_COLOR: '#FF971D',
+        PRIMARY_HOVER: '#FFDAAF',
+        PRIMARY_LIGHT: '#FFD8C6',
         SECONDARY_COLOR: '#323232',
         DISABLED_COLOR: '#AEB3B7',
         BACKGROUND_COLOR: '#FFFFFF',

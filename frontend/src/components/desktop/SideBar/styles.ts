@@ -5,7 +5,6 @@ export const SideBarContainer = styled.div`
   height: 100%;
   width: 200px;
   background-color: ${theme.COLORS.PRIMARY_COLOR};
-  padding: 85px 0 35px;
 `;
 
 export const ButtonGrid = styled.div`
@@ -19,12 +18,21 @@ export const Separator = styled.div`
   background-color: ${theme.COLORS.DISABLED_COLOR};
 `;
 
-export const MenuItemContainer = styled.div`
+export const LogoContainer = styled.div`
   display: flex;
-  align-items: center;
-  gap: 35px;
-  cursor: pointer;
-  padding: 15px 0;
+  height: 80px;
+  width: 200px;
+`;
+
+export const Logo = styled.div`
+  display: flex-row;
+  align-items: flex-start;
+  margin-right: 20px;
+`;
+
+export const Logout = styled.div`
+  position: fixed;
+  bottom: 0;
 `;
 
 export const MenuItemText = styled.header`
