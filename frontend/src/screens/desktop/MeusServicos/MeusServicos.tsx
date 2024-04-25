@@ -6,7 +6,7 @@ import {theme} from "../../../styles/theme";
 
 const MeusServicos: React.FC = () => {
   return (
-    <div style={{ display: "flex", height: "1080px" }}>
+    <div style={{ display: "flex", height: "100%" }}>
       <ScreenHeader screenHeaderText="Meus Serviços"/>
       <div style={{ flexGrow: 1, backgroundColor: theme.COLORS.BACKGROUND_COLOR, padding: "20px" }}>
         {/* Add your agenda content here */}

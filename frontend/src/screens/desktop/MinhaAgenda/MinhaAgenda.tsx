@@ -9,25 +9,44 @@ import { Celula } from "../../../components/desktop/Agenda/Celula/Celula";
 import { ColunaContainer } from "../../../components/desktop/Agenda/Coluna/styles";
 import { Coluna } from "../../../components/desktop/Agenda/Coluna/Coluna";
 import { Linha } from "../../../components/desktop/Agenda/Linha/Linha";
+import { AgendaContainer } from "./styles";
+import { ControlesAgenda } from "../../../components/desktop/Agenda/ControlesAgenda/ControlesAgenda";
 
 const agendamento = [
-  { servico: "Corte de Cabelo", nomeCliente: "João de Barro", whatsappCliente: "(82)95555-2222" },
+  { servico: "Corte de Cabelo", nomeCliente: "Everton da Silva Santos", whatsappCliente: "(82)95555-2222" },
+];
+
+const dataHoje = [
+  { data: "25/04/2024"},
 ];
 
 
 const MinhaAgenda: React.FC = () => {
   return (
-    <div style={{ display: "inline-table", height: "1080px" }}>
-      <div style={{display: "flex"}}>
-        <Coluna columnName="Horário/Dia"></Coluna>
-        <Coluna columnName="Segunda"></Coluna>
-      </div>
-      <div style={{display: "flex"}}>
-        <Linha rowName="08:00"></Linha>
-        <Celula></Celula>
-      </div>
-      <div style={{ flexGrow: 1, backgroundColor: theme.COLORS.BACKGROUND_COLOR, padding: "20px" }}>
-        {/* Add your agenda content here */}
+    <div style={{ display: "inline-table", height: "100%" }}>
+      <ScreenHeader screenHeaderText="Minha Agenda"></ScreenHeader>
+      <ControlesAgenda semanaAtual={"14 - 20 de Abril, 2024"}/>
+      <div>
+        <AgendaContainer>
+          <div style={{ display: "inline-table", height: "100%" }}>
+            <div style={{display: "flex"}}>
+              <Coluna columnName="Horário/Dia"></Coluna>
+              <Coluna columnName="Segunda"></Coluna>
+            </div>
+            <div style={{display: "flex"}}>
+              <Linha rowName="08:00"></Linha>
+              {agendamento.map((item, index) => (
+                <Celula key={index}>
+                  <CardAgendamento
+                    nomeServico={item.servico}
+                    nomeCliente={item.nomeCliente}
+                    whatsappCliente={item.whatsappCliente}
+                  />
+                </Celula>
+              ))}
+            </div>
+          </div>
+        </AgendaContainer>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardContainer, NomeServico, NomeCliente, WhatsAppCliente } from './styles';
+import { CardContainer, NomeServico, NomeCliente } from './styles';
 
 interface CardAgendamentoProps {
   nomeServico: string;
@@ -14,9 +14,8 @@ const CardAgendamento: React.FC<CardAgendamentoProps> = ({ nomeServico, nomeClie
 
   return (
     <CardContainer onClick={handleClick}>
-      <NomeServico>{nomeServico}</NomeServico>
       <NomeCliente>{nomeCliente}</NomeCliente>
-      <WhatsAppCliente>{whatsappCliente}</WhatsAppCliente>
+      <NomeServico>{nomeServico}</NomeServico>
     </CardContainer>
   );
 }
