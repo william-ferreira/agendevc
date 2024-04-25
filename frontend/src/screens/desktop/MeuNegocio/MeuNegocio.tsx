@@ -29,7 +29,7 @@ const MeuNegocio: React.FC = () => {
   return (
     <div style={{ display: "inline-table", height: "100%" }}>
       <ScreenHeader screenHeaderText="Meu Negócio"/>
-      <StandardContainer tituloContainer={"Informações do Negócio"}/>
+      <StandardContainer tituloContainer={"Informações do Negócio"} larguraContainer={545} alturaContainer={500}/>
     </div>
   );
 };
