@@ -3,8 +3,8 @@ import { theme } from '../../../../styles/theme';
 
 export const LinhaContainer = styled.div`
   display: flex;
-  width: 230px;  // Largura fixa
-  height: 85px;  // Altura fixa  
+  width: 190px;  // Largura fixa
+  height: 58px;  // Altura fixa  
   justify-content: center;
   align-items: center;
   color: ${theme.COLORS.BACKGROUND_COLOR};

@@ -3,7 +3,7 @@ import { theme } from '../../../../styles/theme';
 
 export const ColunaContainer = styled.div`
   display: flex;
-  width: 230px;  // Largura fixa
+  width: 190px;  // Largura fixa
   height: 40px;  // Altura fixa  
   justify-content: center;
   align-items: center;
