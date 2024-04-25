@@ -10,7 +10,6 @@ export const ColunaContainer = styled.div`
   color: ${theme.COLORS.BACKGROUND_COLOR};
   font-size: 20px;
   font-weight: 600;
-  border: 2px solid;
   border-color: ${theme.COLORS.PRIMARY_COLOR};
   background-color: ${theme.COLORS.PRIMARY_COLOR};
 `;
