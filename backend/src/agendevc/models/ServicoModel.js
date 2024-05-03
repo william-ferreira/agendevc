@@ -5,7 +5,8 @@ const servicoSchema = new dynamoose.Schema({
     DuracaoServico: Number,
     NomeServico: String,
     PrecoServico: String,
-    ServicoId: String
+    ServicoId: String,
+    PrestadorServicoId: String,
 }, {
     saveUnknown: true,
     timestamps: true

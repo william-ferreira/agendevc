@@ -3,7 +3,8 @@ interface Servico {
     DescricaoServico: String,
     DuracaoServico: Number,
     NomeServico: String,
-    PrecoServico: String
+    PrecoServico: String,
+    PrestadorServicoId: String,
 }
 
 export {Servico};
