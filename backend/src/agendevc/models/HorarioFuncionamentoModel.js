@@ -11,4 +11,4 @@ const horarioFuncionamentoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('HorarioFuncionamento', agendamentoSchema);
+module.exports = dynamoose.model('HorarioFuncionamentoModel', agendamentoSchema);

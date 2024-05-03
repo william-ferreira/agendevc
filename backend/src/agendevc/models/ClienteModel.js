@@ -16,4 +16,4 @@ const clienteSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('Cliente', clienteSchema);
+module.exports = dynamoose.model('ClienteModel', clienteSchema);

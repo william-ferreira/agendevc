@@ -8,4 +8,4 @@ const formaPagamentoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('FormaPagamento', formaPagamentoSchema);
+module.exports = dynamoose.model('FormaPagamentoModel', formaPagamentoSchema);

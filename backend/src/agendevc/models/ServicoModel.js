@@ -11,4 +11,4 @@ const servicoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('Servico', servicoSchema);
+module.exports = dynamoose.model('ServicoModel', servicoSchema);

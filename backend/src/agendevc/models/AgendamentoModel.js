@@ -12,4 +12,4 @@ const agendamentoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('Agendamento', agendamentoSchema);
+module.exports = dynamoose.model('AgendamentoModel', agendamentoSchema);

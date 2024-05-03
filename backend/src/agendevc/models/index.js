@@ -1,15 +1,15 @@
-const PrestadorServico = require('./PrestadorServico');
-const Agendamento = require('./Agendamento');
-const Cliente = require('./Cliente');
-const FormaPagamento = require('./FormaPagamento');
-const Servico = require('./Servico');
-const HorarioFuncionamento = require('./HorarioFuncionamento');
+const PrestadorServicoModel = require('./PrestadorServicoModel');
+const AgendamentoModel = require('./AgendamentoModel');
+const ClienteModel = require('./ClienteModel');
+const FormaPagamentoModel = require('./FormaPagamentoModel');
+const ServicoModel = require('./ServicoModel');
+const HorarioFuncionamentoModel = require('./HorarioFuncionamentoModel');
 
 module.exports = {
-    PrestadorServico,
-    Agendamento,
-    Cliente,
-    FormaPagamento,
-    Servico,
-    HorarioFuncionamento
+    PrestadorServicoModel,
+    AgendamentoModel,
+    ClienteModel,
+    FormaPagamentoModel,
+    ServicoModel,
+    HorarioFuncionamentoModel
 };

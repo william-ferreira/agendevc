@@ -33,4 +33,4 @@ const prestadorServicoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('PrestadorServico', prestadorServicoSchema);
+module.exports = dynamoose.model('PrestadorServicoModel', prestadorServicoSchema);
