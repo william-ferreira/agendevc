@@ -12,6 +12,11 @@ const ServicoService = {
         return servico;
     },
 
+    async getAllServicosByPrestador(prestadorServicoId: string): Promise<Servico[]> {
+        const servicos = await ServicoModel.query('prestadorServicoId').eq(prestadorServicoId).exec() as unknown as Servico[];
+        return servicos;
+    },
+
     async updateServico(servicoId: string, newData: Partial<Servico>): Promise<Servico | null> {
         const updatedServico = await ServicoModel.update(servicoId, newData) as unknown as Servico | null;
         return updatedServico;

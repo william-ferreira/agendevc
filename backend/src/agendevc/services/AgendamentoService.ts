@@ -12,6 +12,16 @@ const ClienteService = {
         return agendamento;
     },
 
+    async getAllAgendamentosByPrestador(prestadorServicoId: string): Promise<Agendamento[]> {
+        const agendamentos = await AgendamentoModel.query('prestadorServicoId').eq(prestadorServicoId).exec() as unknown as Agendamento[];
+        return agendamentos;
+    },
+
+    async getAllAgendamentosByCliente(clienteId: string): Promise<Agendamento[]> {
+        const agendamentos = await AgendamentoModel.query('clienteId').eq(clienteId).exec() as unknown as Agendamento[];
+        return agendamentos;
+    },
+
     async updateAgendamento(agendamentoId: string, newData: Partial<Agendamento>): Promise<Agendamento | null> {
         const updatedAgendamento = await AgendamentoModel.update(agendamentoId, newData) as unknown as Agendamento | null;
         return updatedAgendamento;
