@@ -24,14 +24,14 @@ export const selecioneFormaPg = "Selecione os métodos de pagamento que seu empr
 
 // ----------- Componente: Serviços:
 
-export const adicionaServicoText = "Clique no ‘+’ para adicionar um serviço"
+export const adicionaServicoText = "Clique no ‘+’ para adicionar um serviço."
 
 // ----------- Placeholders:
 
-export const nomeNegocio = "Nome do seu negócio"
-export const nomeServico = "Insira o nome do serviço"
-export const precoServico = "Insira o preço do serviço"
-export const duracaoServicoPlaceholder = "Selecione o tempo necessário para executar o serviço"
+export const nomeNegocio = "Nome do seu negócio."
+export const nomeServico = "Insira o nome do serviço."
+export const precoServico = "Insira o preço do serviço."
+export const duracaoServicoPlaceholder = "Selecione o tempo necessário para executar o serviço."
 export const descricaoNegocioPlaceholder = "Adicione aqui uma breve descrição sobre o seu negócio."
 export const descricaoServicoPlaceholder = "Adicione aqui uma breve descrição sobre o serviço."
 
@@ -50,8 +50,8 @@ export const selecionarDataText = "Selecione a data mais conveniente para você:
 export const selecionarHoraText = "Selecione o horário mais conveniente para você:"
 // ---------------------- Dados e Pagamento
 export const inserirDadosText = "Insira seus dados pessoais e selecione a forma de pagamento:"
-export const nomePlaceholder = "Insira seu nome completo"
-export const celularPlaceholder = "Insira seu número de celular"
+export const nomePlaceholder = "Insira seu nome completo."
+export const celularPlaceholder = "Insira seu número de celular."
 export const formaPgText = "Selecione a forma de pagamento do serviço:"
 export const formaPgPlaceholder = "Selecionar Forma de Pagamento"
 // ---------------------- Confirmação
@@ -60,4 +60,4 @@ export const revisarInfoText = "Revise as informações a seguir antes de agenda
 export const agendarNovamenteText = "Quer agendar outro serviço?"
 // ---------------------- Consultar Agendamentos
 export const consultarText = "Para visualizar os seus agendamentos, informe o número do celular que utilizou para agendar serviços:"
-export const celularDDDPlaceholder = "Insira seu celular com DDD"
+export const celularDDDPlaceholder = "Insira seu celular com DDD."

@@ -12,6 +12,7 @@ import { DateRange } from '@material-ui/icons';
 
 import {theme} from './styles/theme'
 import { Router } from './router/Router';
+import { RouterFirstLogin } from './router/RouterFirstLogin';
 
 function App() {
   return (

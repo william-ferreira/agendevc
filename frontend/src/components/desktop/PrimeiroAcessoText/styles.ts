@@ -6,12 +6,14 @@ export const PrimeiroAcessoTextContainer = styled.div`
   width: auto;  
   height: 50px;
   position: absolute;
-  top: 17%;
-  left: 25%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-content: center;
   color: ${theme.COLORS.BACKGROUND_COLOR};
   font-size: 30px;
   font-weight: 600;
   border-color: ${theme.COLORS.PRIMARY_COLOR};
   background-color: ${theme.COLORS.PRIMARY_COLOR};
+  white-space: nowrap;
 `;

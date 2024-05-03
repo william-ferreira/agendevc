@@ -7,6 +7,7 @@ interface StandardContainerProps {
     tituloContainerSize?: number;
     larguraContainer?: number;
     alturaContainer?: number;
+    children?: React.ReactNode;
 }
 
 const StandardContainer: React.FC<StandardContainerProps> = ({

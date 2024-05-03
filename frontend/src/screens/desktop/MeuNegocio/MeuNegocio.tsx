@@ -4,6 +4,8 @@ import {CustomButton} from "../../../components/common/CustomButton/CustomButton
 import {ScreenHeader} from "../../../components/desktop/ScreenHeader/ScreenHeader"
 import {theme} from "../../../styles/theme";
 import { StandardContainer } from "../../../components/common/StandardContainer/StandardContainer";
+import { InformacoesNegocio } from "../../../components/desktop/InformacoesNegocio/InformacoesNegocio";
+import { NegocioComponent } from "../../../components/desktop/NegocioComponent/NegocioComponent";
 
 const informacoesBasicas = [
   { 
@@ -29,7 +31,7 @@ const MeuNegocio: React.FC = () => {
   return (
     <div style={{ display: "inline-table", height: "100%" }}>
       <ScreenHeader screenHeaderText="Meu Negócio"/>
-      <StandardContainer tituloContainer={"Informações do Negócio"} larguraContainer={545} alturaContainer={500}/>
+      <NegocioComponent></NegocioComponent>
     </div>
   );
 };

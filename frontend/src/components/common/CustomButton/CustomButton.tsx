@@ -5,10 +5,11 @@ import {theme} from "../../../styles/theme";
 
 interface CustomButtonProps {
   buttonColor?: string;
-  buttonWidth?: number; // Largura opcional com padrão definido nos estilos
-  buttonHeight?: number; // Altura opcional com padrão definido nos estilos
+  buttonWidth?: number;
+  buttonHeight?: number;
   buttonText: string;
-  textSize?: number; // Tamanho de texto opcional
+  textSize?: number;
+  onClick?: () => void;
 }
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -16,11 +17,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   buttonWidth = 80,
   buttonHeight = 50,
   buttonText,
-  textSize
+  textSize,
+  onClick
 }) => {
   const handleClick = () => {
-    // Função de clique pode ser expandida aqui
-    console.log("Button clicked!");
+    if (onClick) {
+      onClick();
+    }
   };
 
   return (

@@ -3,6 +3,7 @@ import { SideBar } from "../components/desktop/SideBar/SideBar";
 import { MinhaAgenda } from "../screens/desktop/MinhaAgenda/MinhaAgenda";
 import { MeuNegocio } from "../screens/desktop/MeuNegocio/MeuNegocio";
 import { MeusServicos } from "../screens/desktop/MeusServicos/MeusServicos";
+import { CadastroNegocio } from "../screens/desktop/PrimeiroAcesso/CadastroNegocio/CadastroNegocio";
 
 function Router() {
     return (

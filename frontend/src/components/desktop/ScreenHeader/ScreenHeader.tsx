@@ -4,17 +4,17 @@ import {theme} from "../../../styles/theme";
 
 interface ScreenHeaderProps {
     screenHeaderText: string;
-  }
+}
 
-  const ScreenHeader: React.FC<ScreenHeaderProps> = ({
-    screenHeaderText
-  }) => {
-    return (
-        <HeaderContainer>
-            <Header>{screenHeaderText}</Header>
-            <Separator></Separator>
-        </HeaderContainer>
-    );
-  };
+const ScreenHeader: React.FC<ScreenHeaderProps> = ({
+  screenHeaderText
+}) => {
+  return (
+      <HeaderContainer>
+          <Header>{screenHeaderText}</Header>
+          <Separator></Separator>
+      </HeaderContainer>
+  );
+};
 
 export {ScreenHeader}

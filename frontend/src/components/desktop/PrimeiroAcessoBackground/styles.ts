@@ -7,11 +7,13 @@ export const PrimeiroAcessoContainer = styled.div`
   height: 100vh;
   align-items: center;
   background-color: ${theme.COLORS.PRIMARY_COLOR};
+  position: relative;
+  z-index: 1;
 `;
 
 export const Logo = styled.div`
     position: absolute;
     top: 10%;
-    left: 60%;
+    left: 61.5%;
     transform: translate(-50%, -50%);
 `;

@@ -14,7 +14,6 @@ export const Container = styled.div<{
   flex-direction: column;
   position: absolute;
   top: 12%;
-  margin-left: 50px;
   align-items: flex-start;
   justify-content: center;
 `;

@@ -21,12 +21,12 @@ export const ContainerTitle = styled.h1<StyledContainerProps>`
 `;
 
 export const StyledContainer = styled.div<StyledContainerProps>`
-  background-color: ${theme.COLORS.TRANSPARENT};
+  background-color: ${theme.COLORS.BACKGROUND_COLOR};
   width: ${({ larguraContainer }) => larguraContainer}px;
   height: ${({ alturaContainer }) => alturaContainer}px;
   display: flex;
   position: absolute;
-  left: 40%;
+  left: 39.5%;
   top: 25%;
   flex-direction: column;
   align-items: flex-start;
@@ -37,4 +37,5 @@ export const StyledContainer = styled.div<StyledContainerProps>`
   border: 1px solid;
   border-radius: 5px;
   border-color: ${theme.COLORS.DISABLED_COLOR};
+  z-index: 2;
 `;

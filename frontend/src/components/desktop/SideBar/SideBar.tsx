@@ -4,6 +4,7 @@ import logo from "../../../assets/images/logo-white.png";
 import { SideBarContainer, Separator, ButtonGrid, Logo, LogoContainer, Logout } from "./styles";
 import { Link, useLocation } from "react-router-dom";
 import { DateRange, Store, BusinessCenter, ExitToApp } from '@material-ui/icons';
+import { LogoutModal } from "../LogoutModal/LogoutModal";
 
 const buttons = [
   { icon: <DateRange />, text: "Minha Agenda", route: "/" },
@@ -14,6 +15,15 @@ const buttons = [
 const SideBar: React.FC = () => {
   const location = useLocation();
   const [selectedItem, setSelectedItem] = useState("");
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+      setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+      setModalOpen(false);
+  };
 
   useEffect(() => {
     // Atualiza o item selecionado com base na rota atual
@@ -52,15 +62,14 @@ const SideBar: React.FC = () => {
       </ButtonGrid>
       <Logout>
         {/* Incluindo navegação para sair */}
-        <Link to="/logout" style={{ textDecoration: 'none' }}>
-          <SideBarButton
-            leftIcon={<ExitToApp />}
-            buttonText="Sair do Sistema"
-            isSelected={selectedItem === "Sair do Sistema"}
-            onClick={() => handleItemClick("Sair do Sistema")}
-          />
-        </Link>
+        <SideBarButton
+          leftIcon={<ExitToApp />}
+          buttonText="Sair do Sistema"
+          isSelected={selectedItem === "Sair do Sistema"}
+          onClick={handleOpenModal}
+        />
       </Logout>
+      <LogoutModal isOpen={isModalOpen} onClose={handleCloseModal}/>
     </SideBarContainer>
   );
 };
