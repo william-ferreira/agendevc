@@ -4,6 +4,7 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs18.x
+  region: sa-east-1
   iamRoleStatements:
   - Effect: Allow
     Action:
@@ -26,9 +27,9 @@ functions:
           method: post
           cors: true
   getPrestadorServicoById:
-  handler: functions/prestadorServico/getPrestadorServicoById.main
-  events:
-    - http:
-        path: getPrestador
-        method: get
-        cors: true
+    handler: functions/prestadorServico/getPrestadorServicoById.main
+    events:
+      - http:
+          path: getPrestador
+          method: get
+          cors: true
