@@ -1,7 +1,7 @@
 import AgendamentoModel from '../models/AgendamentoModel';
 import { Agendamento } from '../types/Agendamento';
 
-const ClienteService = {
+const AgendamentoService = {
     async createAgendamento(agendamentoData: Agendamento): Promise<Agendamento> {
         const agendamento = await AgendamentoModel.create(agendamentoData) as unknown as Agendamento;
         return agendamento;
@@ -38,4 +38,4 @@ const ClienteService = {
     }
 };
 
-export { ClienteService };
+export { AgendamentoService };
