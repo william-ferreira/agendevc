@@ -1,4 +1,9 @@
-const dynamoose = require('../config/dynamoConfig');
+const dynamoose = require('dynamoose');
+const agendamentoSchema = require('./Agendamento');
+const clienteSchema = require('./Cliente');
+const formaPagamentoSchema = require('./FormaPagamento');
+const horarioFuncionamentoSchema = require('./HorarioFuncionamento');
+const servicoSchema = require('./Servico');
 
 const prestadorServicoSchema = new dynamoose.Schema({
     PrestadorServicoId: {
@@ -33,4 +38,4 @@ const prestadorServicoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('PrestadorServicoModel', prestadorServicoSchema);
+module.exports = dynamoose.model('PrestadorServico', prestadorServicoSchema);

@@ -1,4 +1,6 @@
-service: agendevc-serverless-api
+org: agendevc
+app: agendevc-api
+service: agendevc-api
 frameworkVersion: '3'
 
 provider:

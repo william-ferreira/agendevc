@@ -1,4 +1,4 @@
-const dynamoose = require('../config/dynamoConfig');
+const dynamoose = require('dynamoose');
 
 const horarioFuncionamentoSchema = new dynamoose.Schema({
     Abre1: String,
@@ -11,4 +11,4 @@ const horarioFuncionamentoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('HorarioFuncionamentoModel', agendamentoSchema);
+module.exports = dynamoose.model('HorarioFuncionamento', horarioFuncionamentoSchema);

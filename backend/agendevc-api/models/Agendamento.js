@@ -1,4 +1,4 @@
-const dynamoose = require('../config/dynamoConfig');
+const dynamoose = require('dynamoose');
 
 const agendamentoSchema = new dynamoose.Schema({
     AgendamentoId: String,
@@ -13,4 +13,4 @@ const agendamentoSchema = new dynamoose.Schema({
     timestamps: true
 });
 
-module.exports = dynamoose.model('AgendamentoModel', agendamentoSchema);
+module.exports = dynamoose.model('Agendamento', agendamentoSchema);
