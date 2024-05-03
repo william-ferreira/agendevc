@@ -3,6 +3,7 @@ const dynamoose = require('../config/dynamoConfig');
 const agendamentoSchema = new dynamoose.Schema({
     AgendamentoId: String,
     ClienteId: String,
+    PrestadorServicoId: String,
     Data: String,
     FormaPagamentoId: String,
     Horario: String,
