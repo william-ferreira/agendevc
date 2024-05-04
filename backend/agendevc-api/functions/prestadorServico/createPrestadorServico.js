@@ -6,7 +6,7 @@ module.exports.createPrestadorServico = async (event) => {
   const body = JSON.parse(Buffer.from(event.body, 'base64').toString())
   const dynamoDb = new AWS.DynamoDB.DocumentClient()
   const putParams = {
-    TableName: process.env.DYNAMODB_CUSTOMER_TABLE,
+    TableName: process.env.DYNAMODB_AGENDEVC_TABLE,
     Item: {
       primary_key: uuidv4(), 
       nomeNegocio: body.nomeNegocio,

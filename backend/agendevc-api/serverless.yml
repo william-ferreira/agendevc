@@ -13,30 +13,55 @@ provider:
         - "dynamodb:PutItem"
         - "dynamodb:Get^"
         - "dynamodb:Scan*"
+        - "dynamodb:GetItem"
         - "dynamodb:UpdateItem"
         - "dynamodb:DeleteItem"
-      Resource: arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${self:service}-customerTable-${sls:stage}
+      Resource: arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${self:service}-agendevcTable-${sls:stage}
 
   environment:
-    DYNAMODB_AGENDEVC_TABLE: ${self:service}-customerTable-${sls:stage}
+    DYNAMODB_AGENDEVC_TABLE: ${self:service}-agendevcTable-${sls:stage}
 
 functions:
-  createCustomer:
+  createPrestadorServico:
     handler: functions/prestadorServico/createPrestadorServico.createPrestadorServico
     events:
       - httpApi:
           path: /addPrestadorServico
           method: post
-  getCustomers:
-    handler: functions/prestadorServico/getPrestadorServico.getPrestadorServico
+  getAllPrestadorServico:
+    handler: functions/prestadorServico/getAllPrestadorServico.getAllPrestadorServico
     events: 
       - httpApi:
-          path: /getAllPrestadorServicos
+          path: /getPrestadorServicos
           method: get
+  createAgendamento:
+    handler: functions/agendamento/createAgendamento.createAgendamento
+    events: 
+      - httpApi:
+          path: /addAgendamento
+          method: post
+  getAgendamentosById:
+    handler: functions/agendamento/getAgendamentoById.getAgendamentoById
+    events: 
+      - httpApi:
+          path: /agendamento/{id}
+          method: get
+  getAllAgendamentos:
+    handler: functions/agendamento/getAllAgendamentos.getAllAgendamentos
+    events: 
+      - httpApi:
+          path: /getAgendamentos
+          method: get
+  deleteAgendamentoById:
+    handler: functions/agendamento/deleteAgendamentoById.deleteAgendamentoById
+    events: 
+      - httpApi:
+          path: /agendamento/{id}
+          method: delete
 
 resources:
   Resources:
-    CustomerTable:
+    AgendevcTable:
       Type: AWS::DynamoDB::Table
       Properties:
         AttributeDefinitions:
@@ -46,4 +71,4 @@ resources:
         KeySchema:
           - AttributeName: primary_key
             KeyType: HASH
-        TableName: ${self:service}-customerTable-${sls:stage}
+        TableName: ${self:service}-agendevcTable-${sls:stage}
